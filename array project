@@ -1,0 +1,12 @@
+TOTAL_WEIGHT = 713
+
+boxes = [[1, 300], [3, 200], [5, 213]]  # locations and weights
+
+print("Welcome to the Martian Cargo Finder!")
+print("You need to guess the locations (kilometer marks) of the boxes.")
+print("Enter 3 kilometer marks where you think the boxes are buried.")
+guess_1 = int(input("Guess 1: "))
+guess_2 = int(input("Guess 2: "))
+guess_3 = int(input("Guess 3: "))
+
+user_guesses = [guess_1, guess_2, guess_3]
