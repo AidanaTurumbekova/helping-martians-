@@ -1,3 +1,4 @@
+import random 
 TOTAL_WEIGHT = 713
 
 boxes = [[1, 300], [3, 200], [5, 213]]  # locations and weights
@@ -23,4 +24,12 @@ total_found_weight = sum(found_weights)
 
 print(f"You found boxes weighing: {found_weights}")
 print(f"Total weight of found boxes: {total_found_weight} kg")
+def shuffle_boxes(boxes):
+    for box in boxes:
+        box[0] = random.randint(1, 7)  # Randomly relocate the box within 7 km
+
+if total_found_weight != TOTAL_WEIGHT:
+    print("Incorrect! The boxes have moved to new locations.")
+    shuffle_boxes(boxes)
+
 
