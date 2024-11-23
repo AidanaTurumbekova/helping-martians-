@@ -16,6 +16,8 @@ def get_valid_guess():
                 print("Please enter a number between 1 and 7.")
         except ValueError:
             print("Invalid input. Please enter an integer.")
+while True:
+    guesses = [get_valid_guess() for _ in range(3)]
 
     found_weights = []
     for guess in guesses:
