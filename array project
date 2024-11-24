@@ -25,11 +25,13 @@ while True:
             if guess == box[0]: 
                 found_weights.append(box[1])
 
-total_found_weight = sum(found_weights)
+    total_found_weight = sum(found_weights)
 
- if total_found_weight == TOTAL_WEIGHT:
+    if total_found_weight == TOTAL_WEIGHT:
         print("Congratulations! You found all the cargo!")
         break
     else:
         print("Incorrect! Try again.")
+        for box in boxes:
+            box[0] = random.randint(1, 7)
 
